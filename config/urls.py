@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from pybo.views import index
+from pybo.views import index # 3번
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pybo/', include('pybo.urls')),
-    path('', index),
+    path('', index), # 4번
 ]
